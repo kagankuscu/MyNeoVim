@@ -10,6 +10,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				-- ensure_installed = { "lua_ls", "csharp_ls" }
+                ensure_installed = { "ts_ls" },
 				auto_install = true,
 			})
 		end,
@@ -23,9 +24,9 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-      lspconfig.html.setup({
-				capabilities = capabilities,
-      })
+            lspconfig.ts_ls.setup({
+                capabilities = capabilities,
+            })
 			lspconfig.csharp_ls.setup({
 				capabilities = capabilities,
 			})
